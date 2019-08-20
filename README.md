@@ -25,7 +25,7 @@ $container容器对象保存了通过BaseYii::createObject创建的对象
 
 - 将业务逻辑action构造为一个InlineAction并执行，这样的好处是可以定制各种action的
 
-#### abstract class **yii\base\Module** extends ServiceLocator
+#### **abstract class yii\base\Module** extends ServiceLocator
 Module的意思是包含MVC的子应用
 - 管理module实例
 - 执行mvc通用逻辑
@@ -64,7 +64,7 @@ Module的意思是包含MVC的子应用
 
 ## 一些高级概念的理解
 
-### 什么是容器？
+### 什么是container容器？
 
 容器就是单例对象，它的属性中包含了很多已经实例化的对象，对象分为单例和非单例，在取出对象的时候有区别，取出单例对象的时候直接返回，
 取出非单例对象的时候，回去重新创建
@@ -78,7 +78,7 @@ Module的意思是包含MVC的子应用
 
 每个controller可以关联多个behavior，通过behavior()方法配置，每个behavior其实本质上就是event事件的集合，通过events()方法配置
 
-### 什么是事件
+### 什么是event事件
 
 事件其实就是一个key-value的数组，key为事件名，value为事件的方法。这样在调用的时候，就只需要执行trigger()方法，
 传入事件名而不用再去执行具体的事件方法了，是的代码更加整洁易于维护
