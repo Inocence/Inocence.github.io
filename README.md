@@ -3,7 +3,7 @@
 ## 主要类的分析
 
 ### yii\BaseYii
-这个是Yii的基础类，都是一些静态属性和静态方法，其中最重要的就是$app主体对象和$container容器对象，
+这个是Yii的基础类，都是一些静态属性和静态方法，其中最重要的属性就是$app主体对象和$container容器对象，
 $container容器对象保存了通过BaseYii::createObject创建的对象
 
 ### **yii\web\Application** extends \yii\base\Application
