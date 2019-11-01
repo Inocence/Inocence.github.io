@@ -211,7 +211,9 @@ public function registerConfiguredProviders()
 #### 构造对象
 
 - singleton() 在容器bindings属性中注册为单例模式
-- make() 创建对象，并判断是否为单例
+- Container->make() 创建对象，并判断在bindings是否注册为单例
+- Container->instance() 直接注入单例对象
+- Container::$instance 为储存单例的全局变量
 
 #### 数组取值方式
 
