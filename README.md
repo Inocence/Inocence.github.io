@@ -194,7 +194,19 @@ public function registerConfiguredProviders()
 }
 ```
 
-### 核心方法
+### 核心思想
+
+### middleware
+
+- middleware中的":"表示分隔别名和参数","表示分隔多个参数
+- middleware通过pipeline的栈进行遍历
+- middlewarePriority表示高优先级middleware
+- App\Http\Kernel中的middleware表示全局middleware会首先在pipeline中进行处理
+- $this->dispatchToRouter()会将$middleware，$middlewareGroups，$routeMiddleware聚合起来处理在pipeline中进行处理
+
+### guard
+
+- 表示认证方式，如session或者token
 
 #### 构造对象
 
